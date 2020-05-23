@@ -11,10 +11,14 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::resource('learn','materialsController');
 
 Route::resource('cards','cardsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

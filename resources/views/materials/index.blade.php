@@ -9,6 +9,9 @@
 
   @endforeach
   {{$material->links()}}
+
+  <h2>P=>pastpapers</h2>
+  <h2>R=>Roadsigns</h2>
 @else 
   <p>No learning material available</p>
 @endif

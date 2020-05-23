@@ -4,7 +4,7 @@
 {!! Form::open(['action' => 'materialsController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
    <div class="form-group">
    {{Form::label('Material_type','Material_type')}}
-   {{ Form::select('material_type', ['L' => 'Past papers', 'S' => 'Road signs'],null, ['class'=>'form-control'])}} 
+   {{ Form::select('material_type', ['p'=> 'Past papers', 'R'=> 'Road signs'],null, ['class'=>'form-control'])}} 
    </div>
    <div class="form-group">    
    {{Form::label('title','Title')}}
