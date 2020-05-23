@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::resource('learn','materialsController');
 
 Route::resource('cards','cardsController');
+Route::resource('complain','complainsController');
 
 Auth::routes();
 

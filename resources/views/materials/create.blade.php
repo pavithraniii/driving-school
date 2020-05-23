@@ -7,7 +7,7 @@
    {{ Form::select('material_type', ['p'=> 'Past papers', 'R'=> 'Road signs'],null, ['class'=>'form-control'])}} 
    </div>
    <div class="form-group">    
-   {{Form::label('title','Title')}}
+   {{Form::label('title','Year or chapter')}}
    {{Form::text('title', '', ['class'=>'form-control','placeholder'=>'title'])}}      
    </div> 
 
