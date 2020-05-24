@@ -38,14 +38,14 @@ class complainsController extends Controller
     {
         $this->validate($request ,[
             'name' => 'required' ,
-            'email'=>'required',
+            // 'email'=>'required',
             'complain' => 'required', 
            
           ]);
 
           $complain=new complains;
           $complain->name=$request->input('name');
-          $complain->email=$request->input('email');
+        //   $complain->email=$request->input('email');
           $complain->complain=$request->input('complain');
           $complain->user_id=auth()->user()->id;//currently logged user
           $complain->save();
