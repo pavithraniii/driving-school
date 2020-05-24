@@ -47,6 +47,7 @@ class complainsController extends Controller
           $complain->name=$request->input('name');
           $complain->email=$request->input('email');
           $complain->complain=$request->input('complain');
+          $complain->user_id=auth()->user()->id;//currently logged user
           $complain->save();
 
           return redirect('/complain');

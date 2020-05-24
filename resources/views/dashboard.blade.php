@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    
+                   <a href="/complain/create" class="btn btn-primary">Add complain</a>
+                  <h3> Add any complain for LEARNALOT Driving School</h3>
                 </div>
             </div>
         </div>

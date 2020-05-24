@@ -1,30 +1,7 @@
-@extends('materials_layout/appcard')
+@extends('layouts/app')
 @section('content')
 
-
-
-
-  <style>
-    table, th, td {
-      border: 3px solid black;
-    }
-
-     /* table {
-   border-collapse: collapse; 
-  width:100%; 
- } */
- td,td {
-  width: 50%;
-}
-
-  th {
-  height: 50px;
-}
-
-th, td {
-  padding: 10px;
-}
-</style>  
+ 
 
      <table>
        <tr>

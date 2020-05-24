@@ -12,6 +12,28 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        table, th, td {
+          border: 3px solid black;
+        }
+    
+         /* table {
+       border-collapse: collapse; 
+      width:100%; 
+     } */
+     td,td {
+      width: 50%;
+    }
+    
+      th {
+      height: 50px;
+    }
+    
+    th, td {
+      padding: 10px;
+    }
+    </style> 
 </head>
 <body>
     <div id="app">
