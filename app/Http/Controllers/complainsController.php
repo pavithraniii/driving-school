@@ -60,7 +60,8 @@ class complainsController extends Controller
      */
     public function show($id)
     {
-        //
+        $complain=complains::find($id);
+        return view('complain_system/show')->with('complain',$complain);
     }
 
     /**

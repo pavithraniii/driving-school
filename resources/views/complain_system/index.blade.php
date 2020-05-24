@@ -30,7 +30,6 @@ th, td {
        <tr>
           <th>Name</th> 
           <th>Email</th> 
-          <th  >Complain</th> 
           <th>Action</th>
        </tr>
        @if(count($complain)>0)
@@ -39,8 +38,7 @@ th, td {
        <tr>
        <td>{{$complains->name}}</td>
        <td>{{$complains->email}}</td>
-       <td>{{$complains->complain}}</td>  
-       <td><a href="#" class="btn btn-primary">Reply</a></td>
+       <td><a href="/complain/{{$complains->id}}" class="btn btn-success">view</a></td>
        </tr>
        @endforeach
        @endif

@@ -14,8 +14,8 @@
   
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a  href="/create">Add</a>
-        &nbsp;
+        {{-- <a  href="/create">Add</a>
+        &nbsp; --}}
         {{-- <a  href="/aboutus">About us</a>
         &nbsp;
         <a  href="#">Pricing</a>
