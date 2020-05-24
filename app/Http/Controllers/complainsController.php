@@ -95,6 +95,9 @@ class complainsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $complain=complains::find($id);
+        $complain->delete();
+
+        return redirect('/complain');
     }
 }
