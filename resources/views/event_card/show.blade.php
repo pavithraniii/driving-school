@@ -23,8 +23,8 @@
 
 .card-image img {
   box-shadow: 1px 1px 10px grey;
-  height: 180px ;
-  width: 100%;
+  height: 280px ;
+  width: 90%;
   border-top-right-radius: 10px;
   border-top-left-radius:  10px;
 }

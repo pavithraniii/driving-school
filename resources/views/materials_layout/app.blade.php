@@ -10,12 +10,17 @@
     <body>
        
         <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a  href="/learn/create">Add</a>
-        &nbsp;
+          <div class="collapse navbar-collapse" id="app-navbar-collapse">
+            <!-- Left Side Of Navbar -->
+            <ul class="nav navbar-nav">
+                &nbsp;
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/learn/create">Add</a></li>
+                
+
+            </ul>
         {{-- <a  href="/aboutus">About us</a>
         &nbsp;
         <a  href="#">Pricing</a>

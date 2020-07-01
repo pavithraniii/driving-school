@@ -30,4 +30,6 @@ class User extends Authenticatable
     public function complain(){
         return $this->hasMany('App\complains');
     }
+
+   
 }

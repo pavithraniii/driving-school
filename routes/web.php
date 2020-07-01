@@ -20,6 +20,8 @@ Route::resource('learn','materialsController');
 Route::resource('cards','cardsController');
 Route::resource('complain','complainsController');
 
+Route::resource('reply','repliesController');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');

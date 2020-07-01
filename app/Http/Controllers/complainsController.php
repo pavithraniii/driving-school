@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\complains;
+use App\replies;
+
 
 class complainsController extends Controller
 {
@@ -25,6 +27,9 @@ class complainsController extends Controller
      */
     public function create()
     {
+        // $user_id=auth()->user()->id;
+        // $user=User::find($user_id);
+        // return view('complain_system/create')->with('reply',$user->reply);
         return view('complain_system/create');
     }
 
@@ -49,9 +54,15 @@ class complainsController extends Controller
           $complain->complain=$request->input('complain');
           $complain->user_id=auth()->user()->id;//currently logged user
           $complain->save();
-
           return redirect('/complain');
+
+        
+         
+
+         
     }
+
+    
 
     /**
      * Display the specified resource.

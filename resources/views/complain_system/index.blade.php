@@ -15,7 +15,7 @@
        <tr>
        <td>{{$complains->name}}</td>
        <td>{{$complains->complain}}</td>
-       <td><a href="/complain/{{$complains->id}}" class="btn btn-success">Reply</a>
+       <td><a href="/complain/{{$complains->id}}" class="btn btn-success">Show</a>
         {!! Form::open(['action' => ['complainsController@destroy',$complains->id],'method'=>'POST']) !!}
            {{Form::hidden('_method','DELETE')}}
            {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
