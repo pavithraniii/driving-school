@@ -94,7 +94,6 @@ class complainController extends Controller
     {
         $complains=complain::find($id);
         $complains->delete();
-
         return redirect('/complain');
 
     }
