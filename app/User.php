@@ -26,10 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-       //user has many complins one to many relationship
-    public function complain(){
-        return $this->hasMany('App\complains');
-    }
 
-   
+    public function complain(){
+        return $this->hasMany('App\complain');
+    }
 }

@@ -18,10 +18,14 @@ Route::get('/', function () {
 Route::resource('learn','materialsController');
 
 Route::resource('cards','cardsController');
-Route::resource('complain','complainsController');
 
-Route::resource('reply','repliesController');
+
+
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
+Route::resource('complain','complainController');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/complain/{complain}/comments','commentController@store');
+

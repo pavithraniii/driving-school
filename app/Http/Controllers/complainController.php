@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\complains;
-use App\replies;
+use App\complain;
 
-
-class complainsController extends Controller
+class complainController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,8 @@ class complainsController extends Controller
      */
     public function index()
     {
-        $complain=complains::all();
-        return view('complain_system/index')->with('complain',$complain);
+        $complains=complain::all();
+        return view('complain/index')->with('complains',$complains);
     }
 
     /**
@@ -27,10 +25,7 @@ class complainsController extends Controller
      */
     public function create()
     {
-        // $user_id=auth()->user()->id;
-        // $user=User::find($user_id);
-        // return view('complain_system/create')->with('reply',$user->reply);
-        return view('complain_system/create');
+        return view('complain/create');
     }
 
     /**
@@ -41,28 +36,18 @@ class complainsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request ,[
-            'name' => 'required' ,
-            // 'email'=>'required',
-            'complain' => 'required', 
-           
-          ]);
+        $this->validate($request,[
+            'title'=>'required',
+            'complain'=>'required',
+        ]);
 
-          $complain=new complains;
-          $complain->name=$request->input('name');
-        //   $complain->email=$request->input('email');
-          $complain->complain=$request->input('complain');
-          $complain->user_id=auth()->user()->id;//currently logged user
-          $complain->save();
-          return redirect('/complain');
-
-        
-         
-
-         
+        $complains=new complain;
+        $complains->title=$request->input('title');
+        $complains->user_id=auth()->user()->id;
+        $complains->complain=$request->input('complain');
+        $complains->save();
+        return redirect('/complain');
     }
-
-    
 
     /**
      * Display the specified resource.
@@ -72,8 +57,8 @@ class complainsController extends Controller
      */
     public function show($id)
     {
-        $complain=complains::find($id);
-        return view('complain_system/show')->with('complain',$complain);
+        $complains=complain::find($id);
+        return view('complain/show')->with('complains',$complains);
     }
 
     /**
@@ -107,9 +92,10 @@ class complainsController extends Controller
      */
     public function destroy($id)
     {
-        $complain=complains::find($id);
-        $complain->delete();
+        $complains=complain::find($id);
+        $complains->delete();
 
         return redirect('/complain');
+
     }
 }

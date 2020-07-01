@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class replies extends Model
+class comments extends Model
 {
-    
     protected $fillable=['complain_id','reply'];
 
     public function complain(){
-        return $this->belongsTo('App\complains');
+        return $this->belongsTo('App\complain');
     }
 }

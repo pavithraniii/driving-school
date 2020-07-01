@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToComplains extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AddUserIdToComplains extends Migration
      */
     public function up()
     {
-        Schema::table('complains',function($table)
-        {
-          $table->integer('user_id');
+        Schema::create('comments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('complain_id');
+            $table->string('reply');
+            $table->timestamps();
         });
     }
 
@@ -26,9 +28,6 @@ class AddUserIdToComplains extends Migration
      */
     public function down()
     {
-        Schema::table('complains',function($table)
-        {
-          $table->dropcolumn('user_id');
-        });
+        Schema::dropIfExists('comments');
     }
 }
