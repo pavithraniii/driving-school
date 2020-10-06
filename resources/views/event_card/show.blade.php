@@ -79,7 +79,7 @@ i    {color:black;
 
 </div>
 
-    
+
 <a href="/cards/{{$card->id}}/edit" class="btn btn-success">Edit</a>
 
 {!! Form::open(['action' => ['cardsController@destroy',$card->id],'method'=>'POST','class'=>'pull-right']) !!}

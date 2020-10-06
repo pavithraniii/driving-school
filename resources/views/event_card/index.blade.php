@@ -71,6 +71,7 @@
   border-radius: 20px;
   font-family: arial;
   padding-top: 5px ;
+
   margin: 3px;
   margin-bottom: 5px ;
 }
@@ -125,15 +126,24 @@
 i     {color:black; 
        right: 1px;
       }
+
+      /* div {
+  
+        padding: 25px 50px 75px;
+  
+}
+  */
         </style>
     </head>
 
     <body>
+      
     @if(count($card)>0)
+    
     @foreach ($card as $cards)   
     
-    <div class="card-time-cell" > 
-        <div class="card-time-cell-box">
+    <div style="margin-left:100px; margin-right:50px; margin-bottom:50px" class="card-time-cell" > 
+        <div  class="card-time-cell-box">
             <div class="card">
                {{-- <span >&#8680;</span> --}}
                <a href="/cards/{{$cards->id}}"><i style='font-size:25px' class='fas'>&#xf14d;</i></a>
@@ -159,7 +169,9 @@ i     {color:black;
         </div>
       </div>
     
+  
    @endforeach
+ 
     @endif
 
      </body>

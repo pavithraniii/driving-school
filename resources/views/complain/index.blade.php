@@ -4,16 +4,16 @@
    @if(count($complains)>0)
    <table class="table table-bordered">
        <tr>
-           <td width="80px">ID</td>
-           <td>Title</td>
-           <td width="150px">Action</td>
+           {{-- <td width="80px">Name</td> --}}
+           <td width="300px">Title</td>
+           <td width="5px">Action</td>
        </tr>
       
    @foreach ($complains as $complain)
   
     
    <tr>
-   <td>{{$complain->id}}</td>
+   {{-- <td>{{Auth::user()->name}}</td> --}}
     <td>{{$complain->title}}</td>
    <td><a href="/complain/{{$complain->id}}" class="btn btn-primary">View</a>
    

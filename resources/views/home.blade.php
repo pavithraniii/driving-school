@@ -19,19 +19,23 @@
                     @if(count($complain)>0)
                     <table class="table table-bordered">
                         <tr>
-                            <td width="80px">ID</td>
-                            <td>Title</td>
-                            <td width="150px">Action</td>
+                          
+                            <td width="300px">Title</td>
+                            <td width="5px">Action</td>
                         </tr>
                        
                     @foreach ($complain as $complains)
                    
                      
                     <tr>
-                    <td>{{$complains->id}}</td>
+                    
                      <td>{{$complains->title}}</td>
                     <td><a href="/complain/{{$complains->id}}" class="btn btn-primary">View</a>
-                         <a href="#" class="btn btn-danger">Delete</a>
+                        <br>
+                        {!! Form::open(['action' => ['complainController@destroy',$complains->id],'method'=>'POST']) !!}
+                       {{Form::hidden('_method','DELETE')}}
+                       {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                        {!! Form::close() !!}
                      </td>
                     </tr>
                  
@@ -44,7 +48,8 @@
 
                 @else 
                 
-                <a href="/complain" class="btn btn-danger">See complain list </a>
+                {{-- <a href="/complain" class="btn btn-danger">See complain list </a> --}}
+                <a href="/chart" class="btn btn-danger">Dashboard </a>
                
                 @endif
             

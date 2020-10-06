@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/chart', function () {
+    return view('chart');
+});
+
 Route::resource('learn','materialsController');
 
 Route::resource('cards','cardsController');
